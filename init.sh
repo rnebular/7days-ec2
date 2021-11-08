@@ -27,7 +27,7 @@ sudo ./steamcmd.sh +login anonymous +force_install_dir /games/7days2die +app_upd
 # saves are:
 # /root/.local/share/7DaysToDie/Saves/Navezgane/Warm Office Server/
 # copy Save files from s3 (commented out)
-aws s3 cp s3://8dot3/7days/Saves/* /root/.local/share/7DaysToDie/Saves/Navezgane/My Game/ --recursive --force
+aws s3 cp s3://8dot3/7days/Saves/* '/root/.local/share/7DaysToDie/Saves/Navezgane/My Game/' --recursive --force
 
 # copy server config file from s3
 cd /games/7days2die
