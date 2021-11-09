@@ -25,7 +25,7 @@
 	<!-- Admin interfaces -->
 	<property name="ControlPanelEnabled"			value="false"/>				<!-- Enable/Disable the web control panel -->
 	<property name="ControlPanelPort"				value="8085"/>				<!-- Port of the control panel webpage -->
-	<property name="ControlPanelPassword"			value="CHANGEME"/>			<!-- Password to gain entry to the control panel -->
+	<property name="ControlPanelPassword"			value="AdminsRule"/>			<!-- Password to gain entry to the control panel -->
 
 	<property name="TelnetEnabled"					value="true"/>				<!-- Enable/Disable the telnet -->
 	<property name="TelnetPort"						value="8081"/>				<!-- Port of the telnet server -->
@@ -100,14 +100,14 @@
 
 	<!-- Multiplayer -->
 	<property name="PartySharedKillRange"			value="100"/>				<!-- The distance you must be within to receive party shared kill xp and quest party kill objective credit. -->
-	<property name="PlayerKillingMode"				value="3" />				<!-- Player Killing Settings (0 = No Killing, 1 = Kill Allies Only, 2 = Kill Strangers Only, 3 = Kill Everyone) -->
+	<property name="PlayerKillingMode"				value="0" />				<!-- Player Killing Settings (0 = No Killing, 1 = Kill Allies Only, 2 = Kill Strangers Only, 3 = Kill Everyone) -->
 
 	<!-- Land claim options -->
 	<property name="LandClaimCount"					value="1"/>					<!-- Maximum allowed land claims per player. -->
 	<property name="LandClaimSize"					value="41"/>				<!-- Size in blocks that is protected by a keystone -->
 	<property name="LandClaimDeadZone"				value="30"/>				<!-- Keystones must be this many blocks apart (unless you are friends with the other player) -->
-	<property name="LandClaimExpiryTime"			value="7"/>					<!-- The number of days a player can be offline before their claims expire and are no longer protected -->
-	<property name="LandClaimDecayMode"				value="0"/>					<!-- Controls how offline players land claims decay. 0=Slow (Linear) , 1=Fast (Exponential), 2=None (Full protection until claim is expired). -->
+	<property name="LandClaimExpiryTime"			value="30"/>				<!-- The number of days a player can be offline before their claims expire and are no longer protected -->
+	<property name="LandClaimDecayMode"				value="2"/>					<!-- Controls how offline players land claims decay. 0=Slow (Linear) , 1=Fast (Exponential), 2=None (Full protection until claim is expired). -->
 	<property name="LandClaimOnlineDurabilityModifier"	value="4"/>				<!-- How much protected claim area block hardness is increased when a player is online. 0 means infinite (no damage will ever be taken). Default is 4x -->
 	<property name="LandClaimOfflineDurabilityModifier"	value="4"/>				<!-- How much protected claim area block hardness is increased when a player is offline. 0 means infinite (no damage will ever be taken). Default is 4x -->
 	<property name="LandClaimOfflineDelay"			value="0"/>					<!-- The number of minutes after a player logs out that the land claim area hardness transitions from online to offline. Default is 0 -->

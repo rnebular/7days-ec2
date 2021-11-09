@@ -1,0 +1,15 @@
+[Unit]
+Description=7days2die service
+Wants=network.target
+After=syslog.target network-online.target
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=10
+User=root
+WorkingDirectory=/games/7days2die
+ExecStart=/games/7days2die/startserver.sh -configfile=serverconfig.xml
+
+[Install]
+WantedBy=multi-user.target
