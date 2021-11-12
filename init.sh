@@ -30,8 +30,8 @@ sudo ./steamcmd.sh +login anonymous +force_install_dir /games/7days2die +app_upd
 cd /games/7days2die
 sudo aws s3 cp s3://8dot3/7days/serverconfig.xml .
 sudo aws s3 cp s3://8dot3/7days/7days.service .
-chmod +x ./serverconfig.xml
-chmod +x ./7days.service
+sudo chmod +x ./serverconfig.xml
+sudo chmod +x ./7days.service
 
 sudo cp 7days.service /etc/systemd/system
 sudo systemctl start 7days
@@ -39,7 +39,8 @@ sudo systemctl start 7days
 # Restore saves:
 # (location on instance) /root/.local/share/7DaysToDie/Saves/Navezgane/My Game/
 # copy Save files from s3 (commented out)
-# aws s3 cp "s3://8dot3/7days/Saves/" '/root/.local/share/7DaysToDie/Saves/Navezgane/My Game/' --recursive --force
+sudo aws s3 cp "s3://8dot3/7days/Saves/" '/root/.local/share/7DaysToDie/Saves/Navezgane/My Game/' --recursive --force
+sudo sudo systemctl restart 7days
 
 # manual start game at CLI
 # cd /games/7days2die
