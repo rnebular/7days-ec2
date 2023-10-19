@@ -45,8 +45,8 @@ sudo systemctl start 7days
 # Restores latest backup:
 # (location on instance) /root/.local/share/7DaysToDie/Saves/Navezgane/My Game/
 # copy Save files from s3
-sudo ./restore-from-s3.sh
-sudo sleep 10; sudo systemctl restart 7days
+#sudo ./restore-from-s3.sh
+#sudo sleep 10; sudo systemctl restart 7days
 sudo systemctl enable 7days
 
 # create cron for auto-backup

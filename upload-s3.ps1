@@ -1,5 +1,5 @@
 # script to upload local files to s3
-aws s3 cp ./s3-files "s3://8dot3/7days/*" --recursive
+aws s3 cp ./s3-files "s3://8dot3/7days/" --recursive
 
 # aws s3 cp ./7days.service "s3://8dot3/7days/7days.service"
 # aws s3 cp ./init.sh "s3://8dot3/7days/init.sh"
