@@ -29,10 +29,11 @@ export LD_LIBRARY_PATH=./linux64:$LD_LIBRARY_PATH
 export SteamAppId="294420" # -beta latest_experimental
 
 # Launch SteamCMD and update 7 Days to Die (gameid=294420 )
-sudo ./steamcmd.sh +login anonymous +force_install_dir /games/7days2die +app_update $SteamAppId validate +quit
+sudo ./steamcmd.sh +force_install_dir /games/7days2die +login anonymous +app_update $SteamAppId validate +quit
 
 # copy server config file from s3
 cd /games/7days2die
+sudo cp serverconfig.xml serverconfig.xml.original
 sudo aws s3 cp s3://8dot3/7days/serverconfig_a20.xml ./serverconfig.xml
 sudo aws s3 cp s3://8dot3/7days/7days.service .
 sudo chmod +x ./serverconfig.xml
